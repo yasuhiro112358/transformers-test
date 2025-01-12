@@ -1,4 +1,4 @@
-from examples.text_classification import classify_text
+from src.examples.text_classification import classify_text
 
 def test_classify_text():
     text = "I love programming!"
