@@ -1,0 +1,5 @@
+# .python-version
+# pyenvのバージョンを指定するファイル
+# pyenv activateをしなくても、このファイルがあれば自動でバージョンが切り替わる
+
+transformers-test-env
