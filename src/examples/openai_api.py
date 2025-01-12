@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import openai
 from openai import OpenAI
 from openai import AsyncOpenAI
-# from openai.error import OpenAIError
+import tiktoken
 from typing import Awaitable, Callable, TypeVar
 
 T = TypeVar("T")
@@ -171,6 +171,11 @@ def test_9_9(client: AsyncOpenAI) -> None:
     for result in results:
         print(result)
 
+def test_9_15() -> None:
+    encoding = tiktoken.encoding_for_model("gpt-4o")
+    tokens: list[int] = encoding.encode("日本の首都はどこですか？")
+    print(tokens)
+
 def main() -> None:
     # Load environment variables and get it
     load_dotenv()
@@ -186,7 +191,8 @@ def main() -> None:
     # test_9_3(client)
     # test_9_5(client)
     # test_9_6(client)
-    test_9_9(async_client)
+    # test_9_9(async_client)
+    test_9_15()
 
 
 
