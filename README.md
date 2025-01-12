@@ -1,7 +1,7 @@
 # transformers-test
 
 ```bash
-python examples/text_classification.py
+python src/examples/text_classification.py
 ```
 
 
