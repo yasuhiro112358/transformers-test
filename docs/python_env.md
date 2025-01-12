@@ -10,13 +10,48 @@ pip freeze > requirements.txt
 # 依存パッケージのインストール
 # requirements.txtに記載されたパッケージをインストールできる
 pip install -r requirements.txt
+
+# 依存パッケージのアップデート
+pip list --outdated
+pip install --upgrade transformers
+```
+
+## pyenvを使用したPythonバージョンの管理
+- Python自体のバージョン管理を行うツール
+- インストールしたPythonバージョンを切り替えることができる
+- インストールしたPythonバージョンの一覧表示や現在のPythonバージョンの表示ができる
+
+```bash
+# インストール（macOSの場合）
+brew update
+brew install pyenv
+
+# 指定したPythonバージョンをインストール
+# インストール場所は~/.pyenv/versions/以下
+pyenv install 3.10.12
+
+# インストールしたPythonバージョンの一覧表示
+pyenv versions
+
+# 現在のPythonバージョンの表示
+pyenv version
+
+# インストールしたPythonバージョンの切り替え
+# .python-versionに設定内容が記述される
+pyenv local 3.10.12
 ```
 
 
-# How to create python environment
+## 仮想環境の作成
+- 仮想環境を作成することで、プロジェクトごとに環境を分けることができる
+- 仮想環境を有効化することで、プロジェクトごとに異なる依存パッケージを使用できる
+- Python標準ライブラリのvenvモジュールを使用することで、仮想環境を作成できる
+- Python自体のバージョン管理は、pyenvで行う
 
 ```bash
 # 仮想環境の作成
+# -mオプションは指定されたモジュール（この場合はvenv）を実行するために使用される
+# venvは作成する仮想環境のディレクトリ名
 python3 -m venv venv
 
 # 仮想環境の有効化
@@ -24,6 +59,12 @@ source venv/bin/activate
 
 # 仮想環境の無効化
 deactivate
+```
+
+
+
+
+
 
 
 
