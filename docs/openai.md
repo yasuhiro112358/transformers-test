@@ -1,10 +1,12 @@
 # OpenAI API for Python
-- OpenAI APIを使用する際に必要なもの
-
 ```bash
 # OpenAIが提供するライブラリ
 https://github.com/openai/openai-python
 pip install openai
+```
+
+## Count the number of tokens
+```bash
 pip install tiktoken
 ```
 
